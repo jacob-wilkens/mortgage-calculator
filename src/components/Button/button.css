@@ -1,0 +1,30 @@
+.clear-btn {
+  border: none;
+  outline: none;
+  background: none;
+  text-decoration: underline;
+  color: var(--slate-500);
+}
+
+.clear-btn:hover {
+  cursor: pointer;
+  color: var(--slate-900);
+}
+
+.clear-btn:active {
+  color: var(--slate-900);
+}
+
+.calculate-btn {
+  color: var(--slate-900);
+  font-size: 16px;
+  font-weight: bold;
+  background-color: var(--lime);
+  border: none;
+  border-radius: 30px;
+}
+
+.calculate-btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}

@@ -1,0 +1,134 @@
+@font-face {
+  font-family: "PlusJakartaSans";
+  src: url("fonts/PlusJakartaSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "PlusJakartaSans";
+  src: url("fonts/PlusJakartaSans-Medium.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  accent-color: var(--lime);
+}
+
+:root {
+  font-family: "PlusJakartaSans", sans-serif;
+  --lime: hsl(61, 70%, 52%);
+  --red: hsl(4, 69%, 50%);
+  --white: hsl(0, 0%, 100%);
+  --slate-100: hsl(202, 86%, 94%);
+  --slate-300: hsl(203, 41%, 72%);
+  --slate-500: hsl(200, 26%, 54%);
+  --slate-700: hsl(200, 24%, 40%);
+  --slate-900: hsl(202, 55%, 16%);
+  --slate-1000: hsl(200, 87%, 9%);
+}
+
+p {
+  font-size: 16px;
+}
+
+label {
+  font-size: 0.8rem;
+  color: var(--slate-700);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#container {
+  background: var(--slate-100);
+  display: flex;
+  width: 100%;
+  min-height: 100dvh;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.outer-container {
+  flex: 1 1 auto;
+  display: flex;
+  max-width: 1024px;
+  background-color: var(--white);
+  border-radius: 10px;
+  flex-flow: row wrap;
+}
+
+.outer-container > * {
+  flex: 1 1;
+}
+
+.left {
+  background-color: var(--white);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border-radius: 10px 0 10px 10px; /* Top-left and bottom-left corners are curved */
+}
+
+.right {
+  background-color: var(--slate-900);
+  border-radius: 0 10px 10px 50px; /* Top-left and bottom-left corners are curved */
+}
+
+.right__title {
+  color: var(--white);
+}
+
+.right__text {
+  text-align: center;
+  color: var(--slate-300);
+}
+
+.input-flex-container {
+  display: flex;
+  flex-flow: column;
+  gap: 0.5rem;
+}
+
+.financials-container {
+  display: flex;
+  gap: 1rem;
+  flex-flow: row wrap;
+}
+
+.financials-container > * {
+  flex: 1 1 118px;
+}
+
+.type-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/*media query for devices with width of 515 or less*/
+@media (max-width: 515px) {
+  #container {
+    align-items: flex-start;
+  }
+  .right {
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+.error {
+  color: var(--red);
+  font-size: 0.9rem;
+  height: 0.5rem;
+}
